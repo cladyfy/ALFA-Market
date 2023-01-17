@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/background_rounded_all"
+    android:layout_marginBottom="14dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="14dp"
+    android:layout_marginEnd="14dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:itemCount="5"
+        tools:listitem="@layout/item_recyceler_market"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDusk"
+        android:id="@+id/viewmain"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:background="?attr/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MORE"
+        android:id="@+id/btn_showmore"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewmain" />
+
+    <FrameLayout
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:background="@drawable/background_rounded_all2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_showmore"
+        app:layout_constraintEnd_toStartOf="@+id/btn_showmore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_showmore">
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/CoinBitText.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="10dp"
+
+            android:text="Programmer : "
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_showmore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_showmore" />
+
+        <TextView
+            android:layout_marginEnd="10dp"
+            style="@style/CoinBitText.BodyAlternate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginStart="4dp"
+            android:text="Mohammad Karimi"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_showmore"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/btn_showmore" />
+
+    </FrameLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
